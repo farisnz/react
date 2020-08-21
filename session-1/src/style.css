@@ -1,0 +1,134 @@
+.ul{
+    background-color: #e5a7ac;
+    list-style: none;
+    margin: 0;
+}
+.ul li{
+    display: inline-block;
+    padding: 10px;
+}
+.ul li a{
+    text-decoration: none;
+    color: white;
+}
+.ul li:last-child{
+    float: right;
+    margin-right: ;
+}
+.category-product .new-arrivals{
+    padding-bottom: 30px;
+}
+.new-arrivals h1{
+    text-align: center;
+    padding-left: 8rem;
+}
+.new-arrivals .product-list{
+    display: inline-block;
+    margin: 0px 34px;
+    text-align: center;
+}
+.new-arrivals .product-list{
+    display: inline-block;
+    margin: 0px 34px;
+    text-align: center;
+}
+.category-product .best-sellers{
+    padding-bottom: 30px;
+}
+.best-sellers h1{
+    text-align: center;
+    padding-left: 8rem;
+
+}
+.best-sellers .product-list{
+    display: inline-block;
+    margin: 0px 34px;
+    text-align: center;
+}
+.best-sellers .product-list{
+    display: inline-block;
+    margin: 0px 34px;
+    text-align: center;
+}
+.category-product .view-more{
+    float: right;
+    margin-right: 40px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+.category-product .view-more a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.category-page .title{
+    text-align: center;
+}
+.category-page .product-list{
+    display: inline-block;
+    margin: 10px 34px;
+    text-align: center;
+}
+.product-page.container{
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+}
+.product-page.container .image{
+    float: left;
+    margin-right: 35px;
+}
+.product-page.container .name{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.product-page.container .price{
+    margin-bottom: 10px;
+}
+.product-page.container .count{
+    padding: 0px 20px;
+}
+.product-page.container .action-primary{
+    margin-top: 20px;
+}
+.product-page.container .action-primary .add-to-cart{
+    background-color: red;
+    padding: 4px 7px;
+    border-radius: 5px;
+}
+.product-page.container .action-primary .add-to-cart a{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+.product-page.container .description{
+    float: left;
+}
+.wrapper{
+    margin-bottom: 40px;
+}
+.wrapper .title{
+    margin-left: 4rem;
+}
+.table-cart{
+    text-align: center;
+}
+.table-cart img{
+    width: 50%;
+}
+.table-cart td{
+    width: 10%;
+}
+.button-checkout{
+    float: right;
+    margin-right: 5rem;
+}
+.button-checkout .checkout{
+    border-radius: 5px;
+    background-color: red;
+    padding: 6px;    
+    text-decoration: none;
+    color: white;
+}
