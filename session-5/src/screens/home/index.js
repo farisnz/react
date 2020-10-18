@@ -10,11 +10,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import {SliderBox} from 'react-native-image-slider-box';
 
-const topProduct = gql`
+const newArrival = gql`
 query Category {
-    categoryList(filters: { ids: { eq: "55" } }){
+    categoryList(filters: { ids: { eq: "45" } }){
         id
         name
         description
@@ -41,33 +40,13 @@ query Category {
 }
 `;
 
-const homeBanner = gql`
-  {
-    getHomepageSlider {
-      images {
-        image_id
-        image_url
-      }
-      slider_id
-    }
-  }
-`;
-
 const Home = ({ navigation }) => {
-  const query = useQuery(topProduct, {});
-  const sliderResponse =  useQuery(homeBanner, {});
-  const [slider, setSlider] = useState([]);
-
-  useEffect(() => {
-    if (sliderResponse.data !== undefined) {
-      setSlider(sliderResponse.data.getHomepageSlider.images);
-    }
-  }, [sliderResponse.data]);
-
-  if (query.loading || sliderResponse.loading) {
+  const query = useQuery(newArrival, {});
+  
+  if (query.loading) {
     return <Text>Loading...</Text>;
   }
-  if (query.error || sliderResponse.error) {
+  if (query.error) {
     return <Text>Error</Text>;
   }
 
@@ -125,15 +104,6 @@ const Home = ({ navigation }) => {
   );
 };
 
-const Banner = (props) => {
-  const bannr = props.images;
-  let sourceImage = [];
-  bannr.map((val) => {
-    sourceImage.push(val.mobile_image_url);
-  });
-  return <SliderBox images={sourceImage} />;
-};
-
 const win = Dimensions.get('window');
 
 const styles = StyleSheet.create({
@@ -186,7 +156,7 @@ const styles = StyleSheet.create({
   productItem: {
     width: 'auto',
     marginBottom: 20,
-    margin: 10,
+    margin: 8,
     textAlign: "center",
   },
   productInfo: {
@@ -195,7 +165,7 @@ const styles = StyleSheet.create({
   },
   productItemName: {
     fontSize: 12,
-    width: 150,
+    width: 100,
     textAlign: "center",
   },
   productItemPrice: {
@@ -203,8 +173,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   imgProductList: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 100,
     marginBottom: 10,
     marginLeft: 'auto',
     marginRight: 'auto',
